@@ -1,0 +1,651 @@
+:root {
+    --green: #0A3641;
+    --white: #fff;
+    --red: red;
+}
+
+/*All new CSS for JS1 ca. */
+
+
+/*Loader*/
+
+.loadingbox {
+    display: block;
+    
+}
+
+.loader {
+    border-top: 3px solid var(--green);
+    color: #9f1694;
+    font-size: 1.2em;
+    margin: 10px auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.loader-indicator {
+    border: 6px solid var(--green);
+    border-top: 6px solid #9d9e9f;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1.5s linear infinite;
+    margin: 20px auto;
+}
+
+
+@keyframes spin {
+   0% { transform: rotate(0deg);}
+   100% { transform: rotate(360deg);}
+}
+
+
+/*Error*/
+
+.errorMessage {
+    display: block;
+    width: max-content;
+    font-size: 1.2em;
+    color: var(--red);
+    padding: 1.5rem;
+    margin: 30px auto;
+    grid-column-end: span 3;
+}
+
+
+/*Women & Men*/
+                                                        
+.jacketInfo {
+    display: block;
+    border:  1px solid var(--green);
+    margin: 10px auto;
+    width: 95%;
+    max-width: 220px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 35)
+}
+ 
+.productMen, .productWoman {
+    display: flex;
+    color: var(--white);
+    letter-spacing: 0.5em;
+    font-weight: bolder;
+    margin: 20px auto;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: var(--green);
+}
+
+.productSection, .productSectionMen {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: center;
+    text-align: center;
+    color: var(--green);
+    padding-bottom: 30px;
+}
+
+.jacketContainer, .jacketContainer a {
+    font-size: 1em;
+    color: var(--green);
+    font-weight: 500;
+    margin: 20px auto 10px;
+    max-width: 95%;
+    height: 60px;
+}
+ 
+.productPrice {
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    color: var(--green);
+    margin-top: -10px;
+}
+ 
+.productImage {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-width: 90%;
+    min-height: 160px;
+    margin: 30px auto;
+}
+ 
+.line5 {
+    display: block;
+    border: 3px solid; 
+    border-color: #0A3641;
+    margin-top: 30px;
+}
+
+#bn{
+    font-size: 0.6em;
+    color: #0A3641; 
+    background-color: #fff;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #0A3641;  
+    border-radius: 6px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35)
+}
+
+.bnBox {
+    margin: 0 4px;
+}
+
+ 
+/*Product (PRODUCTPAGE)*/
+ 
+.productContent {
+    display: block;
+    border: 3px double var(--green);
+}
+ 
+.productName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px auto 0;
+    font-size: 1em;
+}
+ 
+.productImage2 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 90%;
+    max-width: 230px;
+    min-height: 200px;
+    margin: -40px auto;
+}
+ 
+.productInfo {
+    display: block;
+    font-size: 1em;
+    border-top: 2.5px dotted var(--green);
+    margin: 40px auto;
+    padding-top: 10px;
+    justify-content: center;
+}
+ 
+.productPrice2, .properties, .productDetail, .productGender, .sizeButton {
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    margin: -20px auto 30px;
+    padding: 10px 20px;
+    color: var(--green);
+    font-size: 0.7em;  
+}
+ 
+.productPrice2  {
+    font-size: 0.9em;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.saleprice {
+    display: block;
+}
+
+.saleText {
+    display: block;
+    margin: 30px auto -10px;
+    color: red;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px dotted var(--green);   
+}
+
+.onSaleSection, .onSaleSection2  {
+    display: block;
+    color: red;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+}
+ 
+.properties {
+    max-width: 300px;
+    font-size: 0.6em;
+    font-weight: 400;
+    text-transform: uppercase;    
+    letter-spacing: 0.2em;
+    margin-top: 40px;
+}
+
+.properties span {
+    font-weight: 700;
+}
+ 
+.productGender, .productColor {
+    font-size: 0.8em;
+    margin-top: 40px;
+    color: var(--green);
+    margin: 5px auto;
+    padding: 0;
+    text-align: center;
+}
+ 
+.infoBox {
+    width: 150px;
+    margin: 20px auto;
+    font-size: 0.7em;
+}
+ 
+.slcSize {
+    display: block;
+    margin: 10px 30px 10px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.7em;
+}
+ 
+select {
+    display: block;
+    width: 70px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--green);
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--green);
+}
+
+.sizeform, #selectsize2 {
+    text-align: center;
+}
+
+.selectbox {
+    border-top: 2px double var(--green);
+    display: block;
+    justify-content: space-between;
+}
+
+.formbox {
+    display: block;
+    margin-bottom: 30px;
+}
+ 
+#atc, #gtc, .atcbtn {
+    display: block;
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: var(--white);
+    font-style: normal;
+    border-radius: 10px;
+    width: 100px;
+    height: auto;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    margin: 35px auto; 
+    cursor: pointer;
+
+}
+
+#gtc a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--green);
+}
+
+#gtc {
+    margin-top: -25px;
+}
+ 
+.backbutton {
+    font-size: small;
+    margin: 10px 5px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+
+.actionButton {
+    display: block;
+}
+ 
+
+/*JACKET YOU MAY LIKE*/
+
+
+.likesection {
+    display: block;
+    background-color: var(--green);
+    color: var(--white);
+    margin: 0 auto 0;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.liketitle {
+    font-size: 0.8em;
+    padding: 30px 0 5px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-top: 20px double var(--white);
+}
+
+.productsyoumaylike {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    max-width: 500px;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: var(--white);
+}
+
+.likeInfo {
+    display: block;
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    margin: 10px auto;
+    width: 90%;
+}
+
+.likename {
+    color: var(--green);
+}
+
+.likeImage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    margin: 15px auto;
+    background-position: center;
+}
+
+.likePrice {
+    color: var(--green);
+    margin: 5px auto;
+}
+ 
+
+
+@media only screen and (min-width: 390px) and (max-width: 569px) {
+ 
+
+.selectbox {
+    display: flex;
+    max-width: 400px;
+    margin: auto;
+}
+
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 36px;
+}
+
+.cartbuttons {
+    display: flex;
+}
+}
+ 
+
+
+@media only screen and (min-width: 570px) and (max-width: 749px) {
+
+    
+/*Women & Men*/
+
+.jacketInfo {
+    width: 180px;
+    margin: 7px;
+}
+
+.jacketContainer, .jacketContainer a {
+    padding: 5px;
+}
+                                                       
+.productSection, .productSectionMen {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+
+/*Product (PRODUCTPAGE)*/
+
+
+.productContent {
+    border: none;
+    border-top: 6px double var(--green);
+}
+
+.productImage2 {
+    width: 250px;
+    min-height: 300px;
+}
+
+.productDetail {
+   width: 300px;
+   margin: 30px auto;
+}
+
+.properties {
+    max-width: 500px;
+    font-size: 0.7em;
+    margin: 50px auto 0;
+}
+
+.selectbox {
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 36px;
+}
+
+.cartbuttons {
+    display: flex;
+}
+}
+
+
+@media only screen and (min-width: 750px) and (max-width: 999px) {
+
+/*Women & Men*/
+
+.jacketInfo {
+    width: 200px;
+    margin: 7px;
+}
+
+.productSection, .productSectionMen {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.productMen, .productWoman {
+    padding: 0 0 20px;
+    font-size: 1.6em;
+  
+}
+
+.jacketContainer {
+    padding: 0 10px;
+}
+
+
+/*Product (PRODUCTPAGE)*/
+
+.productContent {
+    display: block;
+    grid-template-columns: repeat(3, auto);
+    margin: 10px auto;
+    border: none;
+    border-top: 5px double var(--green);
+}
+
+#productSection {
+    display: flex;
+    justify-content: center;
+}
+
+.productName {
+    font-size: 1.2em;
+    margin: 30px auto -80px;
+}
+
+#productName {
+     grid-column-end: span 3;
+}
+
+.productImage2 {
+    min-width: 280px;
+    min-height: 350px;
+    margin: -50px 0 0 ;
+}
+
+.productInfo {
+    width: 300px;
+}
+
+.infoBox {
+    margin-bottom: 20px;
+}
+
+.properties {
+    margin: 0 auto 0;
+}
+
+.productDetail {
+    margin-top: 20px;
+}
+.selectbox {
+    display: flex;
+    margin: 0 90px;
+}
+
+.slcSize {
+    margin: 10px 0 10px;
+}
+
+#atc {
+
+}
+
+.cartbuttons {
+    margin: -20px 0 0 30px;
+}
+
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+       
+
+/*Women & Men*/
+
+.jacketInfo {
+    width: 200px;
+   margin: 30px;
+}
+
+.productSection, .productSectionMen {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.jacketContainer {
+    padding: 0 10px;
+}
+   
+
+/*Product (PRODUCTPAGE)*/
+
+.productContent {
+    display: block;
+    margin: 0 80px;
+    border: none;
+    border-top: 3px double var(--green);
+}
+
+#productSection {
+    display: flex;
+}
+
+.productName {
+    font-size: 1.3em;
+    margin: 20px auto 0;
+    writing-mode:unset;
+    grid-column-end: span 3;
+}
+
+#productName {
+     grid-column-end: span 3;
+}
+
+.productInfo {
+    min-width: 350px;
+}
+
+.infoBox {
+    margin-bottom: 60px;
+}
+
+.productImage2 {
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 300px;
+    margin-top: -150px;  
+}
+
+.productDetail {
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.productPrice2  {
+    font-size: 1.3em;
+    margin: 0 auto;
+}
+
+.properties {
+    font-size: 1em;
+    margin-top: 0;  
+    font-weight: 500;
+    max-width: 600px;
+}
+
+.productGender, .productColor {
+    font-size: 1.2em;
+}
+
+.backbutton {
+    border-top: 2px solid var(--green);
+    font-size: medium;
+    padding-top: 30px;
+}
+
+.selectbox {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 38px;
+}
+
+
+.cartbuttons {
+    display: flex;
+}
+
+}
