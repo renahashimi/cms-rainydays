@@ -20,9 +20,9 @@ function addToCart (){
   backToShop.innerHTML = "";
   backToShop.innerHTML += `<div><h2> GO BACK TO </h2>
                             <div class ="backtoshoplist">                              
-                              <p><a href="women.html">woman</a></p>
+                              <p><a href="products.html">collection</a></p>
                               <p><a href="index.html">homepage</a></p>
-                              <p><a href="men.html">men</a></p>
+                              
                             </div>`;
 
   //cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
@@ -30,25 +30,25 @@ function addToCart (){
 
   let cartItems = JSON.parse(localStorage.getItem("cartItems"));
   //localStorage.getItem("cartItems");
-  const title = cartItems.title;
-  const image = cartItems.image;
-  const price = cartItems.price;
+  const title = cartItems.name;
+  const image = cartItems.images[0].src;
+  const price = cartItems.prices.price / 100;
   const id = cartItems.id;
 
-  const item = {id, title , image, price};
+  const item = {id, title, image, price};
   localStorage.setItem("cartItems", JSON.stringify(item));
 
+console.log(image);
 
 
-  if (cartItems) {
-     cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
+cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
   <div class="cartInfo">
     <div class="cartcontent">
           <div class="cartimage" style="background-image: url(${item.image})" alt"${item.title}"></div>
 
         <div>
           <h2 class="cartname">${item.title}</h2>
-          <p class="cartprice">$${item.price}</p>
+          <p class="cartprice">${item.price}kr</p>
           </div>
           <button class="removebtn"><i class="fa-regular fa-x fa-xl" style="color: #0a3641;"></i></button>   
 
@@ -56,13 +56,13 @@ function addToCart (){
       </div>
     </div
 </div>`;
-} 
+
 
 /*else {
   cartContent.innerHTML += `<p>No products in cart</p>`;
 }*/
 
-let totalSum = +item.price;
+let totalSum = +item.prices.price;
 total += totalSum;
 
 total = total.toFixed(2);
@@ -81,9 +81,8 @@ function cartNumber () {
 
   }
 }*/
-
-
 }
+
 addToCart(); 
 
 

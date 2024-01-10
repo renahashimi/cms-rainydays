@@ -15,7 +15,6 @@
 }
 
 .loader {
-    border-top: 3px solid var(--green);
     color: #9f1694;
     font-size: 1.2em;
     margin: 10px auto;
@@ -24,9 +23,6 @@
 }
 
 .loader-indicator {
-    border: 6px solid var(--green);
-    border-top: 6px solid #9d9e9f;
-    border-radius: 50%;
     width: 30px;
     height: 30px;
     animation: spin 1.5s linear infinite;
@@ -53,17 +49,100 @@
 }
 
 
+/* ALL NEW CMS CA CSS*/
+
+.skunumber {
+    text-align: left;
+    margin: 0;
+    font-size: 0.7em;
+}
+
+.nameprice {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.namepriceX {
+    display: none;
+    visibility: hidden;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.descriptions {
+    display: flex;
+    width: 100%;
+    max-height: 80px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.descriptions .info1 p {
+    display: block;
+}
+
+.descriptions::after {
+    content: "";
+    position: absolute;
+    background-color: var(--red);
+    inset: 0;
+    height: 175px;
+    margin-top: 430px;
+    z-index: 0;
+    opacity: 0.05;
+}
+ 
+.info1 {
+    width: 100%;
+    font-size: 0.6em;
+    border-left: 0.5px solid var(--red);
+    padding: 0 10px;
+}
+
+.info1 p {
+    padding: 0px;
+}
+
+.info1 span {
+    font-weight: 600;
+}
+
+
+/*-----------------*/
+
+
+/* CCS FOR OLDER CA*/
 /*Women & Men*/
+
+.hidden  {
+    display: none;
+    visibility: hidden;
+}
                                                         
 .jacketInfo {
     display: block;
     border:  1px solid var(--green);
     margin: 10px auto;
     width: 95%;
+    height: 340px;
     max-width: 220px;
     padding-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 35)
+}
+
+.jacketInfo:hover {
+    border: 5px solid var(--green);
+    margin: 10px 5px;
+    padding: 2px;
 }
  
 .productMen, .productWoman {
@@ -85,32 +164,29 @@
     color: var(--green);
     padding-bottom: 30px;
 }
-
-.jacketContainer, .jacketContainer a {
-    font-size: 1em;
-    color: var(--green);
-    font-weight: 500;
-    margin: 20px auto 10px;
-    max-width: 95%;
-    height: 60px;
-}
  
 .productPrice {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1em;
     text-align: center;
     color: var(--green);
-    margin-top: -10px;
+    margin-top: -5px;
 }
  
 .productImage {
-    display: inline-block;
+    display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    min-width: 90%;
+    width: 100%;
     min-height: 160px;
     margin: 30px auto;
+    background-color: var(--white);
+    padding-top: 20px;
+}
+
+.productname {
+    color: var(--green);
 }
  
 .line5 {
@@ -141,13 +217,11 @@
  
 .productContent {
     display: block;
-    border: 3px double var(--green);
 }
  
 .productName {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 10px auto 0;
-    font-size: 1em;
 }
  
 .productImage2 {
@@ -157,9 +231,9 @@
     width: 90%;
     max-width: 230px;
     min-height: 200px;
-    margin: -40px auto;
+    margin: 20px auto 50px;
 }
- 
+
 .productInfo {
     display: block;
     font-size: 1em;
@@ -169,20 +243,10 @@
     justify-content: center;
 }
  
-.productPrice2, .properties, .productDetail, .productGender, .sizeButton {
-    display: block;
-    max-width: 300px;
-    text-align: center;
-    margin: -20px auto 30px;
-    padding: 10px 20px;
-    color: var(--green);
-    font-size: 0.7em;  
-}
- 
 .productPrice2  {
     font-size: 0.9em;
     font-weight: 600;
-    padding-top: 20px;
+    text-transform: lowercase;
 }
 
 .saleprice {
@@ -207,12 +271,12 @@
 }
  
 .properties {
-    max-width: 300px;
+    flex-direction: row;
     font-size: 0.6em;
+    text-align: left;
     font-weight: 400;
-    text-transform: uppercase;    
-    letter-spacing: 0.2em;
-    margin-top: 40px;
+    line-height: 2em;
+    padding-right: 20px;
 }
 
 .properties span {
@@ -229,34 +293,33 @@
 }
  
 .infoBox {
-    width: 150px;
+    max-width: 400px;
     margin: 20px auto;
-    font-size: 0.7em;
-}
- 
-.slcSize {
-    display: block;
-    margin: 10px 30px 10px;
-    padding-top: 10px;
-    text-align: center;
+    padding: 0 0.5rem;
     font-size: 0.7em;
 }
  
 select {
     display: block;
-    width: 70px;
-    margin: auto;
+    width: 50px;
+    height: 20px;
+    margin: 20px auto 5px;
     justify-content: center;
     text-align: center;
-    font-size: 0.8em;
-    color: var(--green);
-    border-radius: 10px;
+    font-size: 1.2em;
+    color: var(--red);
+    border-radius: 3px;
     background-color: #fff;
     color: var(--green);
 }
 
 .sizeform, #selectsize2 {
     text-align: center;
+    color: var(--red);
+    border-top: 1px solid var(--red);
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .selectbox {
@@ -277,7 +340,7 @@ select {
     background-color: var(--white);
     font-style: normal;
     border-radius: 10px;
-    width: 100px;
+    width: 80px;
     height: auto;
     font-size: 0.6em;
     font-weight: bold;
@@ -285,7 +348,6 @@ select {
     padding: 5px;
     margin: 35px auto; 
     cursor: pointer;
-
 }
 
 #gtc a {
@@ -298,11 +360,14 @@ select {
     margin-top: -25px;
 }
  
-.backbutton {
+.backbutton, #back {
     font-size: small;
+    color: var(--green);
     margin: 10px 5px;
     padding: 10px 0;
     text-decoration: underline;
+    border-bottom: 1px solid var(--red);
+
 }
 
 .actionButton {
@@ -412,14 +477,32 @@ select {
 
 /*Product (PRODUCTPAGE)*/
 
+/*NEW CSS*/
+.descriptions{
+    max-height: 100%;
+}
+
+.descriptions::after {
+    height: 190px;
+    margin-top: 520px;
+}
+
+.properties, .info1{
+    font-size: 0.7em;
+}
+
+.infoBox {
+    max-width: 450px;
+}
+
+/*-----------*/
 
 .productContent {
     border: none;
-    border-top: 6px double var(--green);
 }
 
 .productImage2 {
-    width: 250px;
+    max-width: 250px;
     min-height: 300px;
 }
 
@@ -428,18 +511,12 @@ select {
    margin: 30px auto;
 }
 
-.properties {
-    max-width: 500px;
-    font-size: 0.7em;
-    margin: 50px auto 0;
-}
 
 .selectbox {
     display: flex;
     width: 500px;
     margin: 0 auto;
 }
-
 
 #atc, #gtc  {
     margin-right: 15px;
@@ -470,7 +547,6 @@ select {
 .productMen, .productWoman {
     padding: 0 0 20px;
     font-size: 1.6em;
-  
 }
 
 .jacketContainer {
@@ -480,12 +556,47 @@ select {
 
 /*Product (PRODUCTPAGE)*/
 
+/*NEW CSS*/
+
+.descriptions{
+    max-height: 100%;
+}
+
+.descriptions::after {
+    height: 150px;
+    margin-top: 475px;
+}
+
+.properties, .info1{
+    font-size: 0.7em;
+}
+
+.imgnameprice {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.nameprice {
+    display: block;
+    font-size: 2em;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.infoBox {
+    max-width: 500px;
+}
+
+/*--------*/
+
+
 .productContent {
     display: block;
     grid-template-columns: repeat(3, auto);
     margin: 10px auto;
     border: none;
-    border-top: 5px double var(--green);
 }
 
 #productSection {
@@ -503,7 +614,7 @@ select {
 }
 
 .productImage2 {
-    min-width: 280px;
+    min-width: 250px;
     min-height: 350px;
     margin: -50px 0 0 ;
 }
@@ -570,11 +681,10 @@ select {
     display: block;
     margin: 0 80px;
     border: none;
-    border-top: 3px double var(--green);
 }
 
-#productSection {
-    display: flex;
+.info1 {
+    display: block;
 }
 
 .productName {
@@ -588,11 +698,43 @@ select {
      grid-column-end: span 3;
 }
 
+.imgnameprice {
+    display: grid;
+    grid-template-columns: 90% 10%33
+}
+
+.nameprice {
+    display: none;
+    visibility: hidden;
+}
+
+.descriptions{
+    display: block;
+}
+
+.namepriceX {
+    display: block;
+    visibility: visible;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.productPrice2X {
+    text-transform: lowercase;
+    font-weight: 400;
+    margin: 0 0 30px;
+}
+
 .productInfo {
     min-width: 350px;
 }
 
 .infoBox {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    max-width: 750px;
     margin-bottom: 60px;
 }
 
@@ -600,7 +742,8 @@ select {
     min-width: 300px;
     max-width: 400px;
     min-height: 300px;
-    margin-top: -150px;  
+    margin-top: 40px;
+    background-position: left;
 }
 
 .productDetail {
@@ -610,15 +753,26 @@ select {
 }
 
 .productPrice2  {
-    font-size: 1.3em;
-    margin: 0 auto;
+    font-size: 1em;
+    margin-top: 0;
+}
+
+.descriptions::after {
+    display: none;
 }
 
 .properties {
     font-size: 1em;
     margin-top: 0;  
     font-weight: 500;
-    max-width: 600px;
+    max-width: 400px;
+    border-left: 0.5px solid var(--red);
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+.properties,  .info1 {
+    margin-left: 50px;
 }
 
 .productGender, .productColor {
@@ -641,6 +795,10 @@ select {
     margin-right: 15px;
     max-height: 30px;
     margin-top: 38px;
+}
+
+.sizeform {
+    border: none;
 }
 
 

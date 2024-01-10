@@ -1,0 +1,22 @@
+/*CSS for CMS CA*/
+
+
+/*HOME*/
+
+.collectionlink, .collectionlink a {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    font-weight: bolder;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    margin: 25px 10px;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 0.2em;
+}
+
+.collectionlink:hover {
+    font-size: 1.3em;
+}

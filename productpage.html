@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/js.css"> 
     <link rel="stylesheet" href="css/ixd.css"> 
     <script type="module" src="js/productpage.js"></script>
+    <script type="module" src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
     <!-- Hotjar Tracking Code for https://rainydays-ixd-renahashimi.netlify.app/ -->
 <script>
@@ -35,11 +36,9 @@
       <nav class="nav1">
         <div class="nav2">
           <a href="index.html">Home</a>
-          <a href="women.html">Women</a>
-          <a href="men.html">Men</a>
+          <a href="products.html">Collection</a>
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
-          <p class="navoutlet"><a href="outlet.html">Outlet</a></p>
         </div>
       </nav>    
     </div>
@@ -58,9 +57,8 @@
   </header>
   <main>
 
-    <div class="line6"></div>
-    <input type="button" id="back" value="back" onclick="history.go(-1);"> 
     <label for="back" class="backbutton"></label>
+    <input type="button" id="back" value="back" onclick="history.go(-1);"> 
 
     <!--API CALL FOR LOADING-->
     <section class="loadingbox">
@@ -69,6 +67,7 @@
     </section>
     
     <!--API CALL FOR SINGEL API-CALL/JACKET-->
+    <div class="productpagename"></div>
     <div class="productContent"></div>
 
     <!--Size and buttons-->

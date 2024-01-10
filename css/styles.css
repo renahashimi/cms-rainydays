@@ -615,6 +615,7 @@ form textarea {
 .w-a {
     margin-top: 30px;
 }
+
 .w-a p{
     font-size: 1em;
     margin: -10px 10px;
@@ -1724,12 +1725,16 @@ h1 {
 }
    
 .ch-form3 {
-    margin-top: 50px;
+    width: 250px;
+    margin: 40px auto;
+    justify-content: center;
 }
 
 .box4 {
     width: 400px;
     border: none;
+    margin: auto;
+    justify-content: center;
 }
 
 .city1, .code1 {
@@ -1747,14 +1752,23 @@ h1 {
 .m-button {
     margin-top: 20px;
 }
+
 .content5 {
-    margin: 10px;
+    margin: 11px;
     scale:2;
 }
 
 .ch-button {
     width: 250px;
     font-size: 26px;
+}
+
+.pay-logo {
+    width: 200px;
+    margin: auto;
+}
+.w-a {
+    margin-left: 25px;
 }
 
 

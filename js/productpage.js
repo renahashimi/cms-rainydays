@@ -1,22 +1,112 @@
 import { errorMessage } from "./errormessage.js";
-import { likeJackets } from "./like.js";
-import { getCart } from "./data/getCart.js";
 
-export const params = new URLSearchParams (document.location.search);
-export const id = params.get ("id");
-export const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
+const params = new URLSearchParams (document.location.search);
+const id = params.get ("id");
+const apiUrl = "https://rainy-days.renahashimi.no/wp-json/wc/store/products/" + id;
+
+console.log(id);
+console.log(apiUrl);
+
 
 const productContent = document.querySelector(".productContent");
+const productName = document.querySelector(".productpagename");
 
 export async function getProductInfo () {
   try {
       const response = await fetch(apiUrl);
-      const jacket = await response.json();
+      const product = await response.json();
 
-
-      createProductInfo(jacket);
+    console.log(product);
+      createSingleProductInfo(product);
       productContent.innerHTML = "";
-      likeJackets();
+      
+
+      function createSingleProductInfo (product) {
+        setTimeout (function() {
+
+        const price = product.prices.price / 100;
+
+        productContent.innerHTML += `<div class="infoBox">
+                                      <div class="imgnameprice">        
+                                       <div class="productImage2"style="background-image: url(${product.images[0].src})" alt"${product.name}"></div>
+
+                                        <div class="nameprice"
+                                          <h1 class="h1productname">${product.name}</h1>
+                                          <p class="productPrice2">${price}kr</p>
+                                        </div> 
+                                        
+                                      </div>
+
+                                    <div class="descriptions">
+                                      <div class="namepriceX"
+                                        <h1 class="h1productnameX">${product.name}</h1>
+                                        <p class="productPrice2X">${price}kr</p>
+                                      </div> 
+
+                                      <div class="properties">${product.description}</p></div>
+
+                                      <div class="info1">
+                                        <p><span>${product.attributes[0].name}:</span> ${product.attributes[0].terms[0].name}</p>
+                                        <p><span>${product.attributes[1].name}:</span> ${product.attributes[1].terms[0].name}</p>
+                                        <p><span>${product.attributes[2].name}:</span> ${product.attributes[2].terms[0].name}</p>
+                                        <br></br>
+                                        <div class="skunumber"><span>SKU:</span> ${product.sku}</div>
+
+                                      </div>  
+                                    </div>
+    
+                                  
+
+                                    <div class="cartbuttons">
+                                    <i class="addtocartbtn" id="atc" data-product-id=${product.id} data-product-title=${product.name} data-product-image=${product.images[0].src}" data-product-price=${product.prices.price}>ADD TO CART</i>
+                                    <button id="gtc"><a href="cart.html?id=${product.id}">GO TO CART</a></button>
+                                    </div>
+                                  </div>`;
+
+//let price = ${product.prices.price / 100};
+
+//ADD TO CART
+localStorage.setItem("cartItems", product);
+
+let cart = document.querySelectorAll(".addtocartbtn");
+console.log(cart);
+
+
+for(let i=0; i<cart.length;i++){
+cart[i].addEventListener("click", () =>{
+  cartItems (product);
+})
+}
+
+function cartItems (product){
+localStorage.setItem("cartItems", JSON.stringify(product));
+}
+cartItems(product);
+    
+}, 2000);
+
+//Go back button - for jackets on product.html
+const backButton = document.querySelector(".backbutton");
+backButton.innerHTML = "BACK TO JACKETS";
+
+//Loader only for "Productpage" / "productpage.html"
+const load = document.querySelector(".loader");
+const loader = document.querySelector(".loader-indicator");
+load.innerHTML = "Your jacket is loading...";
+
+setTimeout (function () {
+  loader.classList.remove("loader-indicator")
+}, 2200);
+
+setTimeout(function () {
+  load.innerHTML = ""
+}, 2200);
+
+
+//createSingleProductInfo(product);
+
+}
+
 
 } catch(error) {
   console.log("Unknown error", error);
@@ -24,17 +114,11 @@ export async function getProductInfo () {
 }
 }
 
+getProductInfo()
 
-//API call for each jacket
-function createProductInfo (jacket) {
-  setTimeout (function() {
-    productContent.innerHTML += `<div><h1 class="productName">${jacket.title}<h1></div>
-                                 <div id="productSection">
-                                    <div class="productImage2" style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
-                                  <div>
-                                    <div class="properties">description of <span><br>${jacket.title}</br></span></div> 
-                                    <p class="productDetail">${jacket.description}</p>
-                                    <div class="infoBox">
+
+
+/**<div class="infoBox">
                                       <p class="productGender">Gender: ${jacket.gender}</p> 
                                       <p class="productColor">Color: ${jacket.baseColor}</p> 
                                     </div>
@@ -61,88 +145,4 @@ function createProductInfo (jacket) {
                                     <i class="addtocartbtn" id="atc" data-jacket-id=${jacket.id} data-jacket-title=${jacket.title} data-jacket-image=${jacket.image}" data-jacket-price=${jacket.price}>ADD TO CART</i>
                                     <button id="gtc"><a href="cart.html?id=${jacket.id}">GO TO CART</a></button>
                                     </div>
-                                  </div>`;
-
-//ADD TO CART
-localStorage.setItem("cartItems", [jacket.id, jacket.image]);
-
-let cart = document.querySelectorAll(".addtocartbtn");
-console.log(cart);
-
-let product = jacket;
-console.log(product);
-
-for(let i=0; i<cart.length;i++){
-cart[i].addEventListener("click", () =>{
-  cartItems (product);
-  itemsInCart (product);
-  getCart();
-})
-}
-
-function cartItems (product){
-localStorage.setItem("cartItems", JSON.stringify(product));
-}
-cartItems()
-/*
-function itemsInCart() {
-  let inCartItemTotal = localStorage.getItem("itemsInCart");
-  inCartItemTotal = JSON.parse(inCartItemTotal)
-  if (inCartItemTotal) {
-    localStorage.setItem("itemsInCart", inCartItemTotal+1)
-    document.querySelector(".cartnumber").textContent=inCartItemTotal+1;
-
-  } else{
-  localStorage.setItem("itemsInCart", 1);
-  document.querySelector(".cartnumber").textContent=1;
-}
-}
-
-function onLoadItemsIncartNumber () {
-  let inCartItemTotal = localStorage.getItem ("itemsInCart");
-  document.querySelector(".cartnumber").textContent=inCartItemTotal;
-
-}
-onLoadItemsIncartNumber();
-*/
-  
-//Is the jacket on sale ?
-let priceText = document.querySelector(".productPrice2");
-let onSaleText = document.querySelector("#onSaleSection2");
-let saleText = document.querySelector(".saleText");
-
-if (jacket.onSale) {
-    priceText.innerHTML = "<strike>" + "(" + priceText.innerHTML + ")" + "</strike>";
-    priceText.style.fontSize = "0.8em"
-    saleText.innerHTML = "Lucky you, this jacket is actually on sale &#129321"
-  } else {
-    onSaleText.style.display = "none";
-    saleText.style.display = "none";
-  }
-
-}, 2500);
-
-
-//Go back button - for jackets on product.html
-const backButton = document.querySelector(".backbutton");
-backButton.innerHTML = "BACK TO JACKETS";
-
-//Loader only for "Productpage" / "product.html"
-const load = document.querySelector(".loader");
-const loader = document.querySelector(".loader-indicator");
-load.innerHTML = "Your jacket is loading...";
-
-setTimeout (function () {
-  loader.classList.remove("loader-indicator")
-}, 3000);
-
-setTimeout(function () {
-  load.innerHTML = "Is this your new jacket?" + " " + "&#128525"
-}, 3000);
-
-
-} 
-getProductInfo()
-
-
-
+                                  </div>`; */
