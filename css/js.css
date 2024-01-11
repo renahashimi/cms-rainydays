@@ -468,6 +468,17 @@ select {
 .cartbuttons {
     display: flex;
 }
+
+.jacketInfo:hover {
+    border: 5px inset var(--green);
+    margin: 10px 6px;
+    padding: 2px;
+}
+
+.productSection, .productSectionMen {
+    max-width: 400px;
+    margin: auto;
+}
 }
  
 
@@ -478,8 +489,14 @@ select {
 /*Women & Men*/
 
 .jacketInfo {
-    width: 180px;
-    margin: 7px;
+    width: 220px;
+    margin: 15px auto;
+}
+
+.jacketInfo:hover {
+    border: 5px inset var(--green);
+    margin: 15px 15px;
+    padding: 2px;
 }
 
 .jacketContainer, .jacketContainer a {
@@ -488,15 +505,15 @@ select {
                                                        
 .productSection, .productSectionMen {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: 45% 45%;
+    max-width: 550px;
+    margin: auto;
 }
 
 
 /*Product (PRODUCTPAGE)*/
 
 /*NEW CSS*/
-.descriptions{
-}
 
 .descriptions::after {
     height: 240px;
@@ -561,6 +578,12 @@ select {
 .jacketInfo {
     width: 200px;
     margin: 7px;
+}
+
+.jacketInfo:hover {
+    border: 5px inset var(--green);
+    margin: 5px 5px;
+    padding: 2px;
 }
 
 .productSection, .productSectionMen {
@@ -700,6 +723,12 @@ select {
 .jacketInfo {
     width: 200px;
    margin: 30px;
+}
+
+.jacketInfo:hover {
+    border: 5px inset var(--green);
+    margin: 30px 25px;
+    padding: 2px;
 }
 
 .productSection, .productSectionMen {
