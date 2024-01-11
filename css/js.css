@@ -79,7 +79,7 @@
 
 .descriptions {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 67% 33%;
     width: 100%;
     height: 130px;
     margin: 20px auto;
