@@ -1246,6 +1246,28 @@ body header {
     margin-left: -30px;
 }
 
+.ch-form3 {
+    width: 250px;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+.pay-logo {
+    display: flex;
+    border: 2px solid #0A3641;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 5px;
+    z-index: 0;
+    width: 150px;
+    margin: auto;
+}
+
+.w-a p {
+    margin: -10px 60px;
+
+}
+
 .bi-text {
     font-weight: 700;
 }
@@ -1273,6 +1295,7 @@ body header {
 .ch-button {
     width: 220px;
     font-size: 24px;
+    margin: 20px auto 0 20px;
 }
 
 

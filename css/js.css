@@ -141,7 +141,7 @@
 }
 
 .jacketInfo:hover {
-    border: 5px solid var(--green);
+    border: 5px inset var(--green);
     margin: 10px 5px;
     padding: 2px;
 }
@@ -245,8 +245,8 @@
 }
  
 .productPrice2  {
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: bold;
     text-transform: lowercase;
 }
 
@@ -450,14 +450,19 @@ select {
 
 .selectbox {
     display: flex;
-    max-width: 400px;
+    max-width: 350px;
     margin: auto;
 }
 
 #atc, #gtc  {
     margin-right: 15px;
     max-height: 30px;
-    margin-top: 36px;
+    margin-top: 60px;
+}
+
+.slcSize {
+    display: block;
+    width: 100px;
 }
 
 .cartbuttons {
@@ -491,18 +496,20 @@ select {
 
 /*NEW CSS*/
 .descriptions{
-    max-height: 100%;
 }
 
 .descriptions::after {
-    height: 190px;
+    height: 240px;
     margin-top: 520px;
 }
 
-.properties, .info1{
-    font-size: 0.7em;
+.properties {
+    font-size: 0.9em;
 }
 
+.info1 {
+    font-size: 0.8em;
+}
 .infoBox {
     max-width: 450px;
 }
@@ -526,14 +533,19 @@ select {
 
 .selectbox {
     display: flex;
-    width: 500px;
+    width: 350px;
     margin: 0 auto;
+}
+
+.slcSize {
+    display: block;
+    width: 100px;
 }
 
 #atc, #gtc  {
     margin-right: 15px;
     max-height: 30px;
-    margin-top: 36px;
+    margin-top: 65px;
 }
 
 .cartbuttons {
@@ -575,12 +587,16 @@ select {
 }
 
 .descriptions::after {
-    height: 150px;
+    height: 220px;
     margin-top: 475px;
 }
 
-.properties, .info1{
-    font-size: 0.7em;
+.properties{
+    font-size: 1em;
+}
+
+.info1 {
+    font-size: 0.9em;
 }
 
 .imgnameprice {
@@ -590,11 +606,15 @@ select {
 
 .nameprice {
     display: block;
-    font-size: 2em;
+    font-size: 3em;
     text-align: right;
     margin-right: 20px;
     font-weight: bolder;
     letter-spacing: 0.1em;
+}
+
+.productPrice2 {
+    font-size: 0.8em;
 }
 
 .infoBox {
@@ -646,23 +666,28 @@ select {
 .productDetail {
     margin-top: 20px;
 }
+
+
 .selectbox {
     display: flex;
-    margin: 0 90px;
+    width: 350px;
+    margin: 50px auto;
 }
 
 .slcSize {
-    margin: 10px 0 10px;
+    display: block;
+    width: 100px;
 }
 
-#atc {
-
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 65px;
 }
 
 .cartbuttons {
-    margin: -20px 0 0 30px;
+    display: flex;
 }
-
 
 }
 
@@ -695,8 +720,13 @@ select {
     border: none;
 }
 
+.infoBox {
+    max-width: 1000px;
+}
+
 .info1 {
     display: block;
+    font-size: 0.9em;
 }
 
 .productName {
@@ -712,7 +742,7 @@ select {
 
 .imgnameprice {
     display: grid;
-    grid-template-columns: 90% 10%33
+    grid-template-columns: 90% 10%;
 }
 
 .nameprice {
@@ -727,7 +757,7 @@ select {
 .namepriceX {
     display: block;
     visibility: visible;
-    margin-right: 10px;
+    margin-right: 25px;
     text-align: right;
     font-size: 3.5em;
     font-weight: bold;
@@ -745,8 +775,8 @@ select {
 
 .infoBox {
     display: grid;
-    grid-template-columns: 40% 60%;
-    max-width: 750px;
+    grid-template-columns: 35% 65%;
+    max-width: 800px;
     margin-bottom: 60px;
 }
 
@@ -754,7 +784,7 @@ select {
     min-width: 300px;
     max-width: 400px;
     min-height: 300px;
-    margin-top: 40px;
+    margin-top: 100px;
     background-position: left;
 }
 
@@ -774,13 +804,13 @@ select {
 }
 
 .properties {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: 0;  
     font-weight: 500;
-    max-width: 400px;
+    max-width: 450px;
     border-left: 0.5px solid var(--red);
     padding-left: 10px;
-    margin-top: 40px;
+    margin: 40px 0 30px;
 }
 
 .properties,  .info1 {
@@ -799,20 +829,20 @@ select {
 
 .selectbox {
     display: flex;
-    max-width: 400px;
-    margin: 0 auto;
+    width: 400px;
+    margin: 0px 60px;
+}
+
+.slcSize {
+    display: block;
+    width: 100px;
 }
 
 #atc, #gtc  {
     margin-right: 15px;
     max-height: 30px;
-    margin-top: 38px;
+    margin-top: 65px;
 }
-
-.sizeform {
-    border: none;
-}
-
 
 .cartbuttons {
     display: flex;

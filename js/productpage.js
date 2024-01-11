@@ -34,7 +34,6 @@ export async function getProductInfo () {
                                           <h1 class="h1productname">${product.name}</h1>
                                           <p class="productPrice2">${price}kr</p>
                                         </div> 
-                                        
                                       </div>
 
                                     <div class="descriptions">
@@ -51,29 +50,33 @@ export async function getProductInfo () {
                                         <p><span>${product.attributes[2].name}:</span> ${product.attributes[2].terms[0].name}</p>
                                         <br></br>
                                         <div class="skunumber"><span>SKU:</span> ${product.sku}</div>
-
                                       </div>  
                                     </div>
 
-                                    <div class="selectbox">
-                                    <div class="formbox">
-                                      <p class="slcSize">SELECT SIZE</p>
-                                     <form class="sizeform">
-                                      <select class="sizeSelection" id="sizes">
-                                        <option value="sizeXS" id="selectsize2">XS</option>
-                                        <option value="sizeS" id="selectsize2">S</option>
-                                        <option value="sizeM" id="selectsize2">M</option>
-                                        <option value="sizeL" id="selectsize2">L</option>
-                                        <option value="sizeXL" id="selectsize2">XL</option>
-                                      </select>
-                                    </form>
-                                    </div>
-                                  
+                                    <div></div>
+                                
+    
+                                      <div class="selectbox">
+                                        <div class="formbox">
+                                          <p class="slcSize">SELECT SIZE</p>
+                                          <form class="sizeform">
+                                            <select class="sizeSelection" id="sizes">
+                                              <option value="sizeXS" id="selectsize2">XS</option>
+                                              <option value="sizeS" id="selectsize2">S</option>
+                                              <option value="sizeM" id="selectsize2">M</option>
+                                              <option value="sizeL" id="selectsize2">L</option>
+                                              <option value="sizeXL" id="selectsize2">XL</option>
+                                            </select>
+                                          </form>
+                                        </div>
+                                
 
                                     <div class="cartbuttons">
-                                    <i class="addtocartbtn" id="atc" data-product-id=${product.id} data-product-title=${product.name} data-product-image=${product.images[0].src}" data-product-price=${product.prices.price}>ADD TO CART</i>
-                                    <button id="gtc"><a href="cart.html?id=${product.id}">GO TO CART</a></button>
+                                      <i class="addtocartbtn" id="atc" data-product-id=${product.id} data-product-title=${product.name} data-product-image=${product.images[0].src}" data-product-price=${product.prices.price}>ADD TO CART</i>
+                                      <button id="gtc"><a href="cart.html?id=${product.id}">GO TO CART</a></button>
                                     </div>
+                                 
+                              
                                   </div>`;
 
 //let price = ${product.prices.price / 100};

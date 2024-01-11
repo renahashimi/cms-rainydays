@@ -62,7 +62,7 @@ cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
   cartContent.innerHTML += `<p>No products in cart</p>`;
 }*/
 
-let totalSum = +item.prices.price;
+let totalSum = +item.price;
 total += totalSum;
 
 total = total.toFixed(2);
