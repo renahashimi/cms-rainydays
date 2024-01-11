@@ -54,7 +54,20 @@ export async function getProductInfo () {
 
                                       </div>  
                                     </div>
-    
+
+                                    <div class="selectbox">
+                                    <div class="formbox">
+                                      <p class="slcSize">SELECT SIZE</p>
+                                     <form class="sizeform">
+                                      <select class="sizeSelection" id="sizes">
+                                        <option value="sizeXS" id="selectsize2">XS</option>
+                                        <option value="sizeS" id="selectsize2">S</option>
+                                        <option value="sizeM" id="selectsize2">M</option>
+                                        <option value="sizeL" id="selectsize2">L</option>
+                                        <option value="sizeXL" id="selectsize2">XL</option>
+                                      </select>
+                                    </form>
+                                    </div>
                                   
 
                                     <div class="cartbuttons">

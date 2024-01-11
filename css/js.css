@@ -132,7 +132,7 @@
     border:  1px solid var(--green);
     margin: 10px auto;
     width: 95%;
-    height: 340px;
+    height: 370px;
     max-width: 220px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -303,10 +303,10 @@ select {
     display: block;
     width: 50px;
     height: 20px;
-    margin: 20px auto 5px;
+    margin: 20px 0;
     justify-content: center;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     color: var(--red);
     border-radius: 3px;
     background-color: #fff;
@@ -316,7 +316,6 @@ select {
 .sizeform, #selectsize2 {
     text-align: center;
     color: var(--red);
-    border-top: 1px solid var(--red);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -329,8 +328,20 @@ select {
 }
 
 .formbox {
-    display: block;
-    margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    max-width: 130px;
+    margin: auto;
+}
+
+.slcSize{
+    width: 100%;
+    margin: 25px 0;
+    font-size: 0.8em;
+}
+
+.cartbuttons {
+    margin-top: -30px;
 }
  
 #atc, #gtc, .atcbtn {
