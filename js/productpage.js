@@ -4,9 +4,6 @@ const params = new URLSearchParams (document.location.search);
 const id = params.get ("id");
 const apiUrl = "https://rainy-days.renahashimi.no/wp-json/wc/store/products/" + id;
 
-console.log(id);
-console.log(apiUrl);
-
 
 const productContent = document.querySelector(".productContent");
 const productName = document.querySelector(".productpagename");
@@ -16,7 +13,6 @@ export async function getProductInfo () {
       const response = await fetch(apiUrl);
       const product = await response.json();
 
-    console.log(product);
       createSingleProductInfo(product);
       productContent.innerHTML = "";
       
@@ -54,30 +50,25 @@ export async function getProductInfo () {
                                     </div>
 
                                     <div></div>
-                                
-    
+                              
                                       <div class="selectbox">
                                         <div class="formbox">
                                           <p class="slcSize">SELECT SIZE</p>
                                           <form class="sizeform">
-                                            <select class="sizeSelection" id="sizes">
-                                              <option value="sizeXS" id="selectsize2">XS</option>
-                                              <option value="sizeS" id="selectsize2">S</option>
-                                              <option value="sizeM" id="selectsize2">M</option>
-                                              <option value="sizeL" id="selectsize2">L</option>
-                                              <option value="sizeXL" id="selectsize2">XL</option>
-                                            </select>
-                                          </form>
+                                          <select class="sizeSelection" id="sizes">
+                                           <option value="sizeS" id="selectsize2">${product.variations[0].attributes[0].value}</option>
+                                           <option value="sizeM" id="selectsize2">${product.variations[1].attributes[0].value}</option>
+                                           <option value="sizeL" id="selectsize2">${product.variations[2].attributes[0].value}</option>
+                                           <option value="sizeXL" id="selectsize2">${product.variations[3].attributes[0].value}</option>
+                                          </select>
+                                         </form>
                                         </div>
-                                
-
-                                    <div class="cartbuttons">
-                                      <i class="addtocartbtn" id="atc" data-product-id=${product.id} data-product-title=${product.name} data-product-image=${product.images[0].src}" data-product-price=${product.prices.price}>ADD TO CART</i>
-                                      <button id="gtc"><a href="cart.html?id=${product.id}">GO TO CART</a></button>
-                                    </div>
-                                 
-                              
-                                  </div>`;
+                                      
+                                        <div class="cartbuttons">
+                                          <i class="addtocartbtn" id="atc" data-product-id=${product.id} data-product-title=${product.name} data-product-image=${product.images[0].src}" data-product-price=${product.prices.price}>ADD TO CART</i>
+                                          <button id="gtc"><a href="cart.html?id=${product.id}">GO TO CART</a></button>
+                                        </div>
+                                   </div>`;
 
 //let price = ${product.prices.price / 100};
 
@@ -85,7 +76,6 @@ export async function getProductInfo () {
 localStorage.setItem("cartItems", product);
 
 let cart = document.querySelectorAll(".addtocartbtn");
-console.log(cart);
 
 
 for(let i=0; i<cart.length;i++){
@@ -131,34 +121,3 @@ setTimeout(function () {
 }
 
 getProductInfo()
-
-
-
-/**<div class="infoBox">
-                                      <p class="productGender">Gender: ${jacket.gender}</p> 
-                                      <p class="productColor">Color: ${jacket.baseColor}</p> 
-                                    </div>
-                                    <div>
-                                      <div><p class="saleText"></p></div>
-                                      <div><p class="productPrice2">$${jacket.price}</p></div>
-                                      <div class="onSaleSection">
-                                      <p id="onSaleSection2">$${jacket.discountedPrice}</p></div>
-                                    </div>
-                                  <div class="selectbox">
-                                    <div class="formbox">
-                                      <p class="slcSize">SELECT SIZE</p>
-                                     <form class="sizeform">
-                                      <select class="sizeSelection" id="sizes">
-                                        <option value="sizeXS" id="selectsize2">${jacket.sizes[0]}</option>
-                                        <option value="sizeS" id="selectsize2">${jacket.sizes[1]}</option>
-                                        <option value="sizeM" id="selectsize2">${jacket.sizes[2]}</option>
-                                        <option value="sizeL" id="selectsize2">${jacket.sizes[3]}</option>
-                                        <option value="sizeXL" id="selectsize2">${jacket.sizes[4]}</option>
-                                      </select>
-                                    </form>
-                                    </div>
-                                    <div class="cartbuttons">
-                                    <i class="addtocartbtn" id="atc" data-jacket-id=${jacket.id} data-jacket-title=${jacket.title} data-jacket-image=${jacket.image}" data-jacket-price=${jacket.price}>ADD TO CART</i>
-                                    <button id="gtc"><a href="cart.html?id=${jacket.id}">GO TO CART</a></button>
-                                    </div>
-                                  </div>`; */

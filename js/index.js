@@ -9,17 +9,13 @@ contentX.innerHTML += `<nav>
                         <ol><li class="collectionlink"><a href="products.html">SHOP COLLECTION</a></li></ol> 
                       </nav>`;  
 
-
 async function getData() {
     try {
         const response = await fetch(url);
         const jacket = await response.json();
          
-        console.log(jacket);
         newArrivalsContent.innerHTML = "";
       
- 
-
         for (let i = 0; i <jacket.length; i++) {
           const price = jacket[i].prices.price / 100;
            if (jacket[i].prices.price < 100000)  {

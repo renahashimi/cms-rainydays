@@ -38,7 +38,6 @@ function addToCart (){
   const item = {id, title, image, price};
   localStorage.setItem("cartItems", JSON.stringify(item));
 
-console.log(image);
 
 
 cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
@@ -66,7 +65,7 @@ let totalSum = +item.price;
 total += totalSum;
 
 total = total.toFixed(2);
-totalPrice.innerHTML += `<h3>$${total}</h3>`;
+totalPrice.innerHTML += `<h3>${total}kr</h3>`;
 
 
 /*

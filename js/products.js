@@ -6,10 +6,7 @@ const productSection = document.querySelector(".productSection");
 export async function getProductsWC() {
   try {
     const response = await fetch("https://rainy-days.renahashimi.no/wp-json/wc/store/products");
-    const products = await response.json(); 
-    
-    console.log(products, response);
-    
+    const products = await response.json();     
     
     productSection.innerHTML = "";
     collectionName.innerHTML += `<h1>Collection</h1>`;
