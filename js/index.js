@@ -18,7 +18,7 @@ async function getData() {
       
         for (let i = 0; i <jacket.length; i++) {
           const price = jacket[i].prices.price / 100;
-           if (jacket[i].prices.price < 100000)  {
+           if (jacket[i].prices.price < 120000)  {
             
             newArrivalsContent.innerHTML += `<div class="saleInfo2">   
                                               <a href="product.html?id=${jacket[i].id}"class="salejacket>
