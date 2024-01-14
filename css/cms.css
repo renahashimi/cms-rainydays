@@ -38,11 +38,11 @@
 
 .collectionlink, .collectionlink a {
     margin: 25px 10px;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .collectionlink:hover {
-    font-size: 1.6em;
+    font-size: 1.5em;
 }
 
 .content-x {
@@ -55,3 +55,11 @@
 
 }
 
+@media only screen and (min-width: 1000px) {
+
+.content-x {
+    margin-top: 10px;
+    border: none;
+
+}
+}

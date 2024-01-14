@@ -57,29 +57,12 @@ cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
 </div>`;
 
 
-/*else {
-  cartContent.innerHTML += `<p>No products in cart</p>`;
-}*/
-
 let totalSum = +item.price;
 total += totalSum;
 
-total = total.toFixed(2);
+total = total.toFixed(0);
 totalPrice.innerHTML += `<h3>${total}kr</h3>`;
 
-
-/*
-function removeItem(){
-  document.querySelector(".removebtn") = localStorage.removeItem("cartItems");
-}
-removeItem()
-
-function cartNumber () {
-  if (cartItems) {
-    document.querySelector(".cardnumber").textContent = cartContent;
-
-  }
-}*/
 }
 
 addToCart(); 
