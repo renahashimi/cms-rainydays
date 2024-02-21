@@ -7,60 +7,42 @@ Netlify: https://rainydays-cms-renahashimi.netlify.app
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+Rainydays is a fictional online store that sells rain jackets for men and women with a targeted age group between 30-50 years. This website has been developed several times during my first year and the last assignment was to develop an e-commerce site using Wordpress and API.
 
-You can add some bullet points if you'd like to:
+This website contains these pages:
 
-- List item 1
-- List item 2
-- List item 3
+- Home / index.html
+- List of jackets / products.html
+- Specific jacket page / productpage.html
+- My account / myaccount.html
+- About / about.html
+- Contact / contact.html
+- Cart / cart.html
+- Checkout message / success.html
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+- HTML5
+- CSS
+- JavaScript
+- Wordpress
+- API
 
 ## Getting Started
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
-```
-
-2. Install the dependencies:
-
-```
-npm install
+git clone https://github.com/renahashimi/cms-rainydays.git
 ```
 
 ### Running
 
-Netlify: https://rainydays-cms-renahashimi.netlify.app
-
-
-## Contributing
-
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+Netlify: https://sp1-renahashimi.netlify.app
+VSCode: index.html :: Live Server
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+Discord username: rena.h
