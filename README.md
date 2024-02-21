@@ -40,7 +40,7 @@ git clone https://github.com/renahashimi/cms-rainydays.git
 
 ### Running
 
-- Netlify: https://sp1-renahashimi.netlify.app
+- Netlify: https://rainydays-cms-renahashimi.netlify.app
 - VSCode: index.html :: Live Server
 
 ## Contact
