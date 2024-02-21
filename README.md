@@ -1,4 +1,4 @@
-# Rainydays-CMS CA
+# Rainydays / Cross Course Project 
 
 ![Rainydays](https://github.com/renahashimi/cms-rainydays/assets/132304085/5505b2aa-5885-4e5c-83d4-3548b887facb)
 
